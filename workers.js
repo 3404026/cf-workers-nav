@@ -133,6 +133,10 @@ const HTML_CONTENT = `
             color: color-mix(in oklab, var(--muted-foreground) 55%, var(--foreground));
         }
 
+        .category-button.bg-accent:hover {
+            background-color: color-mix(in oklab, var(--foreground) 12%, var(--primary));
+        }
+
         .dropdown-enter {
             animation: dropdown-in 0.2s ease-out forwards;
         }
@@ -1649,7 +1653,7 @@ const HTML_CONTENT = `
         visibleCategories.forEach(cat => {
             const btn = document.createElement('button');
             btn.className = 'category-button whitespace-nowrap px-4 py-1.5 text-xs font-medium rounded-[var(--radius-xl)] border border-line dark:border-line-input transition-all active:scale-95 shadow-sm scroll-snap-align-start';
-            btn.classList.add('bg-muted', 'dark:bg-muted', 'text-muted-foreground', 'dark:text-muted-foreground', 'hover:bg-[var(--menu-hover)]', 'dark:hover:bg-[var(--menu-hover)]', 'hover:text-accent', 'dark:hover:text-accent', 'hover:border-accent', 'dark:hover:border-accent');
+            btn.classList.add('bg-muted', 'dark:bg-muted', 'text-muted-foreground', 'dark:text-muted-foreground', 'hover:bg-[var(--menu-hover)]', 'hover:text-accent', 'dark:hover:text-accent', 'hover:border-accent', 'dark:hover:border-accent');
             
             btn.textContent = cat;
             btn.dataset.target = cat;
